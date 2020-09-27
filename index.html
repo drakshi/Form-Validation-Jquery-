@@ -45,6 +45,8 @@
                 
                 var errorMessage="";
                 var feildMissing="";
+                var phone=$('#phone').val();
+
                                 
                 if($('#email').val()==""){
                     feildMissing+='<br>Email';
@@ -72,7 +74,7 @@
                  errorMessage += "<p>Your email adress is not valid</p>";   
                   
                 }               
-                if($.isNumeric($('#phone').val())==false){
+                if($.isNumeric($('#phone').val())==false|| phone.length!=10){
                     errorMessage+="<p>enter correct phone number</p>";
                   
                 }
